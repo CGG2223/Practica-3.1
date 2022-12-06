@@ -25,20 +25,20 @@ namespace Practica_3._1_GitHub
         private void button1_Click(object sender, EventArgs e)
         {
             string textoTelegrama;
-            char tipoTelegrama = ' ';
+            char tipoTelegrama = 'o';//modificado CGG2223
             int numPalabras = 0;
             double coste;
             //Leo el telegrama
             textoTelegrama = txtTelegrama.Text;
-            // telegrama urgente?
+            // telegrama urgente? CGG2223
             if (cbUrgente.Checked)
                 tipoTelegrama = 'u'; //CGG2223
             //Obtengo el número de palabras que forma el telegrama
-            numPalabras = textoTelegrama.Length;
+            numPalabras = textoTelegrama.Split(' ',',','.',';').Length;
             //Si el telegrama es ordinario
             if (tipoTelegrama == 'o')
                 if (numPalabras <= 10)
-                    coste = 25;
+                    coste = 2.5; //CGG2223
                 else
                     coste = 0.5 * numPalabras;
             else
@@ -47,7 +47,7 @@ namespace Practica_3._1_GitHub
                 if (numPalabras <= 10)
                     coste = 5;
                 else
-                    coste = 5 + 0.75 * (numPalabras - 10);
+                    coste = 5 + 0.75 * (numPalabras - 10);//CGG2223
             else
                 coste = 0;
             txtPrecio.Text = coste.ToString() + " euros";
