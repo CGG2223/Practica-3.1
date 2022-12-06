@@ -30,8 +30,11 @@ namespace Practica_3._1_GitHub
             double coste;
             //Leo el telegrama
             textoTelegrama = txtTelegrama.Text;
-            // telegrama urgente? CGG2223
-            if (cbUrgente.Checked)
+            // telegrama urgente?
+            // if (cbUrgente.Checked) cambio realizado por CGG2223
+            if (ordinario.Checked)
+                tipoTelegrama = 'o';
+            if (urgente.Checked)
                 tipoTelegrama = 'u'; //CGG2223
             //Obtengo el número de palabras que forma el telegrama
             numPalabras = textoTelegrama.Split(' ',',','.',';').Length;

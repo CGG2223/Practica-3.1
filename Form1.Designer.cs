@@ -33,7 +33,8 @@
             this.txtTelegrama = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.cbUrgente = new System.Windows.Forms.CheckBox();
+            this.urgente = new System.Windows.Forms.RadioButton();
+            this.ordinario = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // button1
@@ -79,22 +80,35 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Coste";
             // 
-            // cbUrgente
+            // urgente
             // 
-            this.cbUrgente.AutoSize = true;
-            this.cbUrgente.Location = new System.Drawing.Point(119, 177);
-            this.cbUrgente.Name = "cbUrgente";
-            this.cbUrgente.Size = new System.Drawing.Size(70, 17);
-            this.cbUrgente.TabIndex = 5;
-            this.cbUrgente.Text = "Urgente?";
-            this.cbUrgente.UseVisualStyleBackColor = true;
+            this.urgente.AutoSize = true;
+            this.urgente.Location = new System.Drawing.Point(173, 175);
+            this.urgente.Name = "urgente";
+            this.urgente.Size = new System.Drawing.Size(63, 17);
+            this.urgente.TabIndex = 5;
+            this.urgente.TabStop = true;
+            this.urgente.Text = "Urgente";
+            this.urgente.UseVisualStyleBackColor = true;
+            // 
+            // ordinario
+            // 
+            this.ordinario.AutoSize = true;
+            this.ordinario.Location = new System.Drawing.Point(71, 175);
+            this.ordinario.Name = "ordinario";
+            this.ordinario.Size = new System.Drawing.Size(67, 17);
+            this.ordinario.TabIndex = 6;
+            this.ordinario.TabStop = true;
+            this.ordinario.Text = "Ordinario";
+            this.ordinario.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(501, 290);
-            this.Controls.Add(this.cbUrgente);
+            this.Controls.Add(this.ordinario);
+            this.Controls.Add(this.urgente);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtTelegrama);
@@ -115,7 +129,8 @@
         private System.Windows.Forms.TextBox txtTelegrama;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox cbUrgente;
+        private System.Windows.Forms.RadioButton urgente;
+        private System.Windows.Forms.RadioButton ordinario;
     }
 }
 
